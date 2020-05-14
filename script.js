@@ -1,4 +1,4 @@
-const palos = ["corazón", "diamante", "pica", "trébol"];
+const palos = ["corazon", "diamante", "pica", "trebol"];
 const valores = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 let paloArriba = document.querySelector("#simboloArriba");
 let numero = document.querySelector("#numero");
