@@ -5,14 +5,14 @@ let numero = document.querySelector("#numero");
 let paloAbajo = document.querySelector("#simboloAbajo");
 
 
-function eleccionCarta(arriba1, arriba2){
+function eleccionCarta(arr1, arr2){
     let carta =[]
-    carta.push(arriba1[Math.floor(Math.random()*arriba1.length)]);
-    carta.push(arriba2[Math.floor(Math.random()*arriba2.length)]);
+    carta.push(arr1[Math.floor(Math.random()*arr1.length)]);
+    carta.push(arr2[Math.floor(Math.random()*arr2.length)]);
     return carta
 }
-function asignarColor(up){
-    if(up[0] === "corazon" || up[0] === "diamante"){
+function asignarColor(arr){
+    if(arr[0] === "corazon" || arr[0] === "diamante"){
         paloArriba.style.color = "red";
         numero.style.color = "red";
         paloAbajo.style.color = "red";
@@ -23,16 +23,16 @@ function asignarColor(up){
         paloAbajo.style.color = "black";
     }
 }
-function asignarPalo(up){
-    if(up[0] === "corazon"){
+function asignarPalo(arr){
+    if(arr[0] === "corazon"){
         paloArriba.innerHTML = "♥"
         paloAbajo.innerHTML = "♥"
     }
-    else if(up[0] === "diamante"){
+    else if(arr[0] === "diamante"){
         paloArriba.innerHTML = "♦"
         paloAbajo.innerHTML = "♦"
     }
-    else if(up[0] === "trebol"){
+    else if(arr[0] === "trebol"){
         paloArriba.innerHTML = "♣"
         paloAbajo.innerHTML = "♣"
     }
@@ -41,8 +41,8 @@ function asignarPalo(up){
         paloAbajo.innerHTML = "♠"
     }
 }
-function asignarValor(up){
-    numero.innerHTML = up[1];
+function asignarValor(arr){
+    numero.innerHTML = arr[1];
 }
 function generacionCarta(){
     let carta = eleccionCarta(palos, valores);
